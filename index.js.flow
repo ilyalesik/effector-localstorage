@@ -1,0 +1,8 @@
+
+type Holder = {
+    init: () => any,
+    watcher: (storeValue: any) => Holder,
+    onError: ((err: any) => mixed) => Holder
+}
+
+declare export default function connectLocalStorage(key: string): Holder;

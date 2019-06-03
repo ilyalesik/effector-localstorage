@@ -4,9 +4,10 @@
   "description": "Module for Effector for sync state with localStorage",
   "main": "index.js",
   "scripts": {
+    "flow": "flow",
     "size": "size-limit",
     "lint": "eslint '**/*.{js,jsx}' --quiet",
-    "prepublish": "npm run lint && npm run size"
+    "prepublish": "npm run flow && npm run lint && npm run size"
   },
   "eslintConfig": {
     "extends": "@logux/eslint-config/browser",
@@ -50,6 +51,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^4.0.0",
+    "flow-bin": "^0.100.0",
     "size-limit": "^1.3.5"
   }
 }
