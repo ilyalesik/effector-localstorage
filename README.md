@@ -36,7 +36,7 @@ npm i effector-localstorage --save
 
 ## Sponsored
 
-<a href="https://lessmess.agency/?utm_source=react-use-trigger">
+<a href="https://lessmess.agency/?utm_source=effector-localstorage">
   <img src="https://lessmess.agency/badges/sponsored_by_lessmess.svg"
        alt="Sponsored by Lessmess" width="236" height="54">
 </a>
