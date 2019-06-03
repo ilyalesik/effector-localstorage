@@ -5,9 +5,12 @@
 Minimalistic (124 B) module for [effector](https://github.com/zerobias/effector) that sync stores with `localStorage`.
 
 ```javascript
-import {createStore} from 'effector'
+import {createStore, createEvent} from 'effector'
 import connectLocalStorage from "effector-localstorage";
 
+const increment = createEvent('increment')
+const decrement = createEvent('decrement')
+const resetCounter = createEvent('reset counter')
 
 const counterLocalStorage = connectLocalStorage("counter")
   .onError((err) => console.log(err)) // setup error callback
