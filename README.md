@@ -10,7 +10,7 @@ import connectLocalStorage from "effector-localstorage";
 
 
 const counterLocalStorage = connectLocalStorage("counter")
-    .onError((err) => console.log(err)) // setup error callback
+  .onError((err) => console.log(err)) // setup error callback
 
 const counter = createStore(counterLocalStorage.init() || 0) // initialize store with localStorage value
   .watch(counterLocalStorage.watcher) // update localStorage on every store change
