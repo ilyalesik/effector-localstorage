@@ -1515,6 +1515,13 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
+effector@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/effector/-/effector-0.18.0.tgz#3467f5cc30998f709ce472a79ed5066940a31f51"
+  integrity sha512-y6xbxcoIXtNsbH0UZ6BDnbavzL83YUKvgGw5D/MeyXN0Vy+U197IIe2jz+7LcgArk+RghmkBMXzlNbwTNwMumg==
+  dependencies:
+    symbol-observable "^1.2.0"
+
 ejs@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
@@ -5081,6 +5088,11 @@ svgo@^1.0.0:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+symbol-observable@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
+  integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
 
 table@^5.2.3:
   version "5.4.0"
