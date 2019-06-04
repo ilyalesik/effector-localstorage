@@ -5,12 +5,15 @@
 Minimalistic (124 B) module for [effector](https://github.com/zerobias/effector) that sync stores with `localStorage`.
 
 ```javascript
-import {createStore} from 'effector'
+import {createStore, createEvent} from 'effector'
 import connectLocalStorage from "effector-localstorage";
 
+const increment = createEvent('increment')
+const decrement = createEvent('decrement')
+const resetCounter = createEvent('reset counter')
 
 const counterLocalStorage = connectLocalStorage("counter")
-    .onError((err) => console.log(err)) // setup error callback
+  .onError((err) => console.log(err)) // setup error callback
 
 const counter = createStore(counterLocalStorage.init() || 0) // initialize store with localStorage value
   .watch(counterLocalStorage.watcher) // update localStorage on every store change
@@ -36,7 +39,7 @@ npm i effector-localstorage --save
 
 ## Sponsored
 
-<a href="https://lessmess.agency/?utm_source=react-use-trigger">
+<a href="https://lessmess.agency/?utm_source=effector-localstorage">
   <img src="https://lessmess.agency/badges/sponsored_by_lessmess.svg"
        alt="Sponsored by Lessmess" width="236" height="54">
 </a>
