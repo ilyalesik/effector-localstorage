@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/effector-localstorage.svg)](https://www.npmjs.com/package/effector-localstorage)
 
-Minimalistic (114 B) module for [effector](https://github.com/zerobias/effector) that sync stores with `localStorage`.
+Minimalistic (120 B) module for [effector](https://github.com/zerobias/effector) that sync stores with `localStorage`.
 
 ```javascript
 import {createStore, createEvent} from 'effector'
