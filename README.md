@@ -22,7 +22,7 @@ const counter = createStore(counterLocalStorage.init() || 0) // initialize store
   
 counter.watch(counterLocalStorage) // update localStorage on every store change
 ```
-
+View example at [codesandbox](https://codesandbox.io/s/effector-localstorage-85czp) or [repository](/example).
 
 ## Installation
 
