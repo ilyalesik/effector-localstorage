@@ -1,6 +1,13 @@
 
 function connectLocalStorage (key) {
-  var holder = {}
+  var holder = function (storeValue) {
+      try {
+          var saveState = JSON.stringify(storeValue)
+          localStorage.setItem(key, saveState)
+      } catch (err) {
+          holder.onError && holder.onError(err)
+      }
+  }
   holder.onError = function (errorHandler) {
     holder.errorHandler = errorHandler
     return holder
@@ -15,14 +22,6 @@ function connectLocalStorage (key) {
       holder.onError && holder.onError(err)
     }
     return null
-  }
-  holder.watcher = function (storeValue) {
-    try {
-      var saveState = JSON.stringify(storeValue)
-      localStorage.setItem(key, saveState)
-    } catch (err) {
-      holder.onError && holder.onError(err)
-    }
   }
   return holder
 }
