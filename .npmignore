@@ -19,3 +19,5 @@ example
 .travis.yml
 .babelrc
 .gitignore
+.idea
+.eslintignore
