@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/effector-localstorage.svg)](https://www.npmjs.com/package/effector-localstorage)
 
-Minimalistic (120 B) module for [effector](https://github.com/zerobias/effector) that sync stores with `localStorage`.
+Minimalistic (130 B) module for [effector](https://github.com/zerobias/effector) that sync stores with `localStorage`.
 
 ```javascript
 import {createStore, createEvent} from 'effector'
@@ -15,7 +15,7 @@ const resetCounter = createEvent('reset counter')
 const counterLocalStorage = connectLocalStorage("counter")
   .onError((err) => console.log(err)) // setup error callback
 
-const counter = createStore(counterLocalStorage.init() || 0) // initialize store with localStorage value
+const counter = createStore(counterLocalStorage.init(0)) // initialize store with localStorage value
   .on(increment, state => state + 1)
   .on(decrement, state => state - 1)
   .reset(resetCounter)

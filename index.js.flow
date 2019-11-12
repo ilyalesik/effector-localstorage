@@ -1,7 +1,7 @@
 // @flow
 
 type Holder = {
-    init: () => any,
+    init: (def?: any) => any,
     onError: ((err: any) => mixed) => Holder,
     (storeValue: any): Holder
 }
