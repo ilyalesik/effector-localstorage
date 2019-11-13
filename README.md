@@ -1,5 +1,5 @@
 # effector-localstorage
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 [![npm version](https://img.shields.io/npm/v/effector-localstorage.svg)](https://www.npmjs.com/package/effector-localstorage)
 
@@ -56,6 +56,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://twitter.com/ilialesik"><img src="https://avatars2.githubusercontent.com/u/1270648?v=4" width="100px;" alt="Ilya Lesik"/><br /><sub><b>Ilya Lesik</b></sub></a><br /><a href="https://github.com/lessmess-dev/effector-localstorage/commits?author=ilyalesik" title="Code">💻</a></td>
     <td align="center"><a href="http://stackoverflow.com/users/388916/hubro"><img src="https://avatars0.githubusercontent.com/u/597206?v=4" width="100px;" alt="Tomas Sandven"/><br /><sub><b>Tomas Sandven</b></sub></a><br /><a href="https://github.com/lessmess-dev/effector-localstorage/commits?author=Hubro" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/yumauri"><img src="https://avatars0.githubusercontent.com/u/6583994?v=4" width="100px;" alt="Victor"/><br /><sub><b>Victor</b></sub></a><br /><a href="https://github.com/lessmess-dev/effector-localstorage/commits?author=yumauri" title="Code">💻</a></td>
   </tr>
 </table>
 
