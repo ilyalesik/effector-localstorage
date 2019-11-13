@@ -13,6 +13,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Hubro",
+      "name": "Tomas Sandven",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/597206?v=4",
+      "profile": "http://stackoverflow.com/users/388916/hubro",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
