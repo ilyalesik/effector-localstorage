@@ -1,29 +1,29 @@
+function connectLocalStorage (key, storage) {
+  storage = storage || window.localStorage
+  var errorHandler = function () {} // eslint-disable-line func-style
 
-function connectLocalStorage (key) {
-  function holder (storeValue) {
+  function holder (value) {
     try {
-      var saveState = JSON.stringify(storeValue)
-      localStorage.setItem(key, saveState)
+      storage.setItem(key, JSON.stringify(value))
     } catch (err) {
-      holder.errorHandler(err)
+      errorHandler(err)
     }
   }
-  holder.errorHandler = function () {}
-  holder.onError = function (errorHandler) {
-    holder.errorHandler = errorHandler
+
+  holder.onError = function (handler) {
+    errorHandler = handler
     return holder
   }
-  holder.init = function (def) {
+
+  holder.init = function (value) {
     try {
-      var savedState = localStorage.getItem(key)
-      if (savedState !== null) {
-        return JSON.parse(savedState)
-      }
+      value = JSON.parse(storage.getItem(key))
     } catch (err) {
-      holder.errorHandler(err)
+      errorHandler(err)
     }
-    return def === undefined ? null : def
+    return value == null ? null : value
   }
+
   return holder
 }
 

@@ -1,9 +1,9 @@
 // @flow
 
 type Holder = {
-    init: (def?: any) => any,
+    init: (value?: any) => any,
     onError: ((err: any) => mixed) => Holder,
     (storeValue: any): Holder
 }
 
-declare export default function connectLocalStorage(key: string): Holder;
+declare export default function connectLocalStorage(key: string, storage?: Storage): Holder;
