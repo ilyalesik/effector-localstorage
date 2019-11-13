@@ -3,6 +3,7 @@
 type Holder = {
     init: (value?: any) => any,
     onError: ((err: any) => mixed) => Holder,
+    onChange: (event: (value: any) => any) => Holder,
     (storeValue: any): Holder
 }
 
