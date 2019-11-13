@@ -1,6 +1,5 @@
 # effector-localstorage
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
-
 [![npm version](https://img.shields.io/npm/v/effector-localstorage.svg)](https://www.npmjs.com/package/effector-localstorage)
 
 Minimalistic (111 B) module for [effector](https://github.com/zerobias/effector) that sync stores with `localStorage`.
