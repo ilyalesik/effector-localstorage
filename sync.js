@@ -14,6 +14,13 @@ function connectStorage (key) {
     return holder
   }
 
+  holder.onChange = function (event) {
+    addEventListener('storage', function (e) {
+      e.key === key && event(holder.init())
+    })
+    return holder
+  }
+
   holder.init = function (value) {
     try {
       value = JSON.parse(localStorage.getItem(key))
