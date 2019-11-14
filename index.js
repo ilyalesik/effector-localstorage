@@ -1,5 +1,5 @@
 function connectStorage (key, storage) {
-  storage = storage || window.localStorage
+  storage = storage || localStorage
   var errorHandler = function () {} // eslint-disable-line func-style
 
   function holder (value) {
@@ -16,8 +16,8 @@ function connectStorage (key, storage) {
   }
 
   holder.onChange = function (event) {
-    window.addEventListener('storage', function (e) {
-      e.key === key && e.storageArea === storage && event(holder.init())
+    addEventListener('storage', function (e) {
+      e.key === key && event(holder.init())
     })
     return holder
   }
