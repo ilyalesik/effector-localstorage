@@ -1,5 +1,5 @@
-function connectLocalStorage (key, storage) {
-  storage = storage || window.localStorage
+function connectStorage (key, storage) {
+  storage = storage || localStorage
   var errorHandler = function () {} // eslint-disable-line func-style
 
   function holder (value) {
@@ -15,6 +15,13 @@ function connectLocalStorage (key, storage) {
     return holder
   }
 
+  holder.onChange = function (event) {
+    addEventListener('storage', function (e) {
+      e.key === key && event(holder.init())
+    })
+    return holder
+  }
+
   holder.init = function (value) {
     try {
       value = JSON.parse(storage.getItem(key))
@@ -27,4 +34,4 @@ function connectLocalStorage (key, storage) {
   return holder
 }
 
-module.exports = connectLocalStorage
+module.exports = connectStorage
