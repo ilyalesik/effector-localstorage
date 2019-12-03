@@ -2,7 +2,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 [![npm version](https://img.shields.io/npm/v/effector-localstorage.svg)](https://www.npmjs.com/package/effector-localstorage)
 
-Minimalistic (151 B) module for [effector](https://github.com/zerobias/effector) that sync stores with `localStorage`.
+Minimalistic (99 B) module for [effector](https://github.com/zerobias/effector) that sync stores with `localStorage`.
 
 ```javascript
 import {createStore, createEvent} from 'effector'
@@ -11,7 +11,35 @@ import connectLocalStorage from "effector-localstorage";
 const increment = createEvent('increment')
 const decrement = createEvent('decrement')
 const resetCounter = createEvent('reset counter')
-const setCounter = createEvent('set counter')
+
+const counterLocalStorage = connectLocalStorage("counter")
+  .onError((err) => console.log(err)) // setup error callback
+
+const counter = createStore(counterLocalStorage.init(0)) // initialize store with localStorage value
+  .on(increment, state => state + 1)
+  .on(decrement, state => state - 1)
+  .reset(resetCounter)
+
+counter.watch(counterLocalStorage) // update localStorage on every store change
+```
+View example at [codesandbox](https://codesandbox.io/s/effector-localstorage-85czp) or [repository](/example).
+
+### Synchronize store between different tabs/windows
+
+Local storage has one awesome feature — it can be synced between two (or more) widows/tabs. Window has [storage](https://www.w3schools.com/jsref/event_storage_url.asp) event, which is only triggered when a window **other than itself** makes the changes.
+
+This way it is possible to synchronise counter on two tabs of a browser. Or, closer to reality, abstract flag `authenticated`, when user performs logout on one tab — that triggers logout on all other opened tabs with the same application.
+
+To make store synchronizable, just use `effector-localstorage/sync` instead of `effector-localstorage`. Also you will need to create event, which will set store value to new one (which came from another tab/window).
+
+```javascript
+import {createStore, createEvent} from 'effector'
+import connectLocalStorage from "effector-localstorage/sync";
+
+const increment = createEvent('increment')
+const decrement = createEvent('decrement')
+const resetCounter = createEvent('reset counter')
+const setCounter = createEvent('set counter') // event to set store value
 
 const counterLocalStorage = connectLocalStorage("counter")
   .onError((err) => console.log(err)) // setup error callback
@@ -20,12 +48,11 @@ const counterLocalStorage = connectLocalStorage("counter")
 const counter = createStore(counterLocalStorage.init(0)) // initialize store with localStorage value
   .on(increment, state => state + 1)
   .on(decrement, state => state - 1)
-  .on(setCounter, (state, value) => value)
+  .on(setCounter, (state, value) => value) // set store value due to external tab/window change
   .reset(resetCounter)
 
 counter.watch(counterLocalStorage) // update localStorage on every store change
 ```
-View example at [codesandbox](https://codesandbox.io/s/effector-localstorage-85czp) or [repository](/example).
 
 ## Installation
 

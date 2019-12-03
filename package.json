@@ -15,8 +15,12 @@
   },
   "size-limit": [
     {
-      "limit": "151 B",
+      "limit": "99 B",
       "path": "index.js"
+    },
+    {
+      "limit": "146 B",
+      "path": "sync.js"
     }
   ],
   "repository": {
