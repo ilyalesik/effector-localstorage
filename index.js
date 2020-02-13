@@ -16,11 +16,12 @@ function connectStorage (key) {
 
   holder.init = function (value) {
     try {
-      value = JSON.parse(localStorage.getItem(key))
+      var item = localStorage.getItem(key)
+      return item === null ? value : JSON.parse(item)
     } catch (err) {
       errorHandler && errorHandler(err)
     }
-    return value == null ? null : value
+    return value
   }
 
   return holder
