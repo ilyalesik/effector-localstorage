@@ -8,7 +8,6 @@
     "typescript": "tsc -p tsconfig.json --noEmit",
     "size": "size-limit",
     "lint": "eslint '**/*.{js,jsx}' --quiet",
-    "prepublish": "npm run flow && npm run typescript && npm run lint && npm run size"
   },
   "eslintConfig": {
     "extends": "lessmess/lib"
@@ -16,11 +15,13 @@
   "size-limit": [
     {
       "limit": "102 B",
-      "path": "index.js"
+      "path": "index.js",
+      "running": false
     },
     {
       "limit": "149 B",
-      "path": "sync.js"
+      "path": "sync.js",
+      "running": false
     }
   ],
   "repository": {
