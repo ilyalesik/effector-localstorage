@@ -7,7 +7,7 @@
     "flow": "flow",
     "typescript": "tsc -p tsconfig.json --noEmit",
     "size": "size-limit",
-    "lint": "eslint '**/*.{js,jsx}' --quiet",
+    "lint": "eslint '**/*.{js,jsx}' --quiet"
   },
   "eslintConfig": {
     "extends": "lessmess/lib"
