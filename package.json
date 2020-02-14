@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "flow": "flow",
+    "flow:check": "flow check",
     "typescript": "tsc -p tsconfig.json --noEmit",
     "size": "size-limit",
     "lint": "eslint '**/*.{js,jsx}' --quiet"
