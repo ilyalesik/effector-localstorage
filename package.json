@@ -1,0 +1,79 @@
+{
+  "name": "effector-localstorage",
+  "description": "Module for Effector for sync state with localStorage",
+  "version": "1.0.0",
+  "author": "Ilya Lesik <ilialesik@gmail.com>",
+  "contributors": [
+    "Victor Didenko <yumaa.verdin@gmail.com> (https://yumaa.name)"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ilyalesik/effector-localstorage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ilyalesik/effector-localstorage/issues"
+  },
+  "homepage": "https://github.com/ilyalesik/effector-localstorage#readme",
+  "keywords": [
+    "effector",
+    "persist",
+    "storage",
+    "localstorage",
+    "local storage"
+  ],
+  "type": "module",
+  "main": "./index.js",
+  "exports": "./index.js",
+  "types": "./index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "test": "c8 --reporter=lcov --reporter=text uvu -i mock tests",
+    "size": "size-limit --highlight-less",
+    "build": "esbuild index.js --minify --outfile=out.js",
+    "clean": "rm -rf dual-publish-tmp coverage out.js"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 60
+  },
+  "size-limit": [
+    {
+      "name": "old index.js",
+      "path": "old/index.cjs",
+      "gzip": true
+    },
+    {
+      "name": "old sync.js",
+      "path": "old/sync.cjs",
+      "gzip": true
+    },
+    {
+      "name": "index.js / gzip",
+      "path": "index.js",
+      "gzip": true,
+      "limit": "210 B"
+    },
+    {
+      "name": "index.js / brotli",
+      "path": "index.js",
+      "brotli": true,
+      "limit": "167 B"
+    }
+  ],
+  "peerDependencies": {
+    "effector": ">=22.0.0"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.2.6",
+    "c8": "^8.0.0",
+    "effector": "^22.8.6",
+    "esbuild": "^0.18.11",
+    "prettier": "^3.0.0",
+    "size-limit": "^8.2.6",
+    "snoop": "^1.0.4",
+    "typescript": "^5.1.6",
+    "uvu": "0.5.6"
+  }
+}

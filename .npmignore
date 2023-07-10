@@ -1,0 +1,8 @@
+.vscode/
+coverage/
+node_modules/
+old/
+tests/
+.gitignore
+out.js
+pnpm-lock.yaml
