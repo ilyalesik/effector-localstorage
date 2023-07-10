@@ -1,7 +1,0 @@
-.cache/
-dist/
-node_modules/
-flow-typed/
-test/
-types/
-example

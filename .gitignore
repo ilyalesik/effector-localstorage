@@ -1,8 +1,4 @@
-.DS_Store
-npm-debug.log
-
-.cache/
-dist/
-node_modules/
-.idea/
 .vscode/
+coverage/
+node_modules/
+out.js
