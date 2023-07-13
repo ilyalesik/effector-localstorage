@@ -78,7 +78,7 @@ persist({
 
 ## Value Encoding
 
-[LocalStorage] supports storeing only plain strings. Because of that it is required to do value serialization for persisting and string deserialization for restoring the value, if your value is more complex, than just plain string.
+[LocalStorage] supports storing only plain strings. Because of that it is required to do value serialization for persisting and string deserialization for restoring the value, if your value is more complex, than just plain string.
 
 `effector-localstorage` uses [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) for serialization and [`JSON.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) for deserialization.<br>
 You cannot change it.
@@ -102,11 +102,11 @@ Note though, that you will probably want to add `serialize:'ignore'` to persiste
 
 The only valid reason to increase package size — is to fix an issue, but not new functionality.
 
-If you know, how to reduce package size without breaking tests — PRs are wellcome :)
+If you know, how to reduce package size without breaking tests — PRs are welcome :)
 
 If your business logic requires more complex behaviour, like custom serialization/deserialization, support for `sessionStorage` or other storages, like `IndexedDB`, or reactive pick-ups from non-reactive storage — take a look on [`effector-storage`](https://github.com/yumauri/effector-storage) package.
 
-`effector-localstorage`'s API was intentianally changed in order for `effector-storage` to be "drop-in" replacement for it. You can just replace import and here you go, ready to enrich your application:
+`effector-localstorage`'s API was intentionally changed in order for `effector-storage` to be "drop-in" replacement for it. You can just replace import and here you go, ready to enrich your application:
 
 ```diff
 - import persist from 'effector-localstorage'
