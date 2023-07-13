@@ -73,7 +73,7 @@ persist({
 - `store` ([_Store_]): Store to synchronize with `localStorage`.
 - `key` ([_string_]): Key for `localStorage`, to store value in.
 - `def`?: (_any_): Default value, which will be passed to `store` in case of absent storage value. Default = `store.defaultState`.
-- `fail`? ([_Event_] | [_Effect_] | _(error: any) => void_): Event, Effect or plain function, which will be triggered in case of any error (serialization/deserialization error, storage is full and so on).
+- `fail`? ([_Event_] | [_Effect_]): Event or Effect, which will be triggered in case of any error (serialization/deserialization error, storage is full and so on).
 - `sync`? ([_boolean_]): Add [`'storage'`] event listener or no. Default = `true`.
 
 ## Value Encoding
