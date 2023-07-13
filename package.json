@@ -23,15 +23,32 @@
     "local storage"
   ],
   "type": "module",
-  "main": "./index.js",
-  "exports": "./index.js",
-  "types": "./index.d.ts",
   "sideEffects": false,
+  "types": "./index.d.ts",
+  "module": "./index.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
   "scripts": {
     "test": "c8 --reporter=lcov --reporter=text uvu -i mock tests",
     "size": "size-limit --highlight-less",
     "build": "esbuild index.js --minify --outfile=out.js",
-    "clean": "rm -rf dual-publish-tmp coverage out.js"
+    "clean": "rm -rf package coverage out.js",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "publint": "publint package",
+    "prepublishOnly": "rm -rf ./package && clean-publish"
+  },
+  "publishConfig": {
+    "directory": "package"
+  },
+  "clean-publish": {
+    "withoutPublish": true,
+    "tempDir": "package"
   },
   "prettier": {
     "semi": false,
@@ -67,13 +84,17 @@
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.2.6",
+    "all-contributors-cli": "^6.26.1",
     "c8": "^8.0.0",
+    "clean-publish": "^4.2.0",
     "effector": "^22.8.6",
-    "esbuild": "^0.18.11",
+    "esbuild": "^0.18.12",
     "prettier": "^3.0.0",
+    "publint": "^0.1.16",
     "size-limit": "^8.2.6",
     "snoop": "^1.0.4",
     "typescript": "^5.1.6",
     "uvu": "0.5.6"
-  }
+  },
+  "packageManager": "pnpm@8.6.7"
 }
