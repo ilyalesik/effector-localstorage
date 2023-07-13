@@ -123,9 +123,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/ilialesik"><img src="https://avatars2.githubusercontent.com/u/1270648?v=4?s=100" width="100px;" alt="Ilya Lesik"/><br /><sub><b>Ilya Lesik</b></sub></a><br /><a href="https://github.com/ilialesik/effector-localstorage/commits?author=ilyalesik" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://stackoverflow.com/users/388916/hubro"><img src="https://avatars0.githubusercontent.com/u/597206?v=4?s=100" width="100px;" alt="Tomas Sandven"/><br /><sub><b>Tomas Sandven</b></sub></a><br /><a href="https://github.com/ilialesik/effector-localstorage/commits?author=Hubro" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/yumauri"><img src="https://avatars0.githubusercontent.com/u/6583994?v=4?s=100" width="100px;" alt="Victor Didenko"/><br /><sub><b>Victor Didenko</b></sub></a><br /><a href="https://github.com/ilialesik/effector-localstorage/commits?author=yumauri" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/ilialesik"><img src="https://avatars2.githubusercontent.com/u/1270648?v=4?s=100" width="100px;" alt="Ilya Lesik"/><br /><sub><b>Ilya Lesik</b></sub></a><br /><a href="https://github.com/ilyalesik/effector-localstorage/commits?author=ilyalesik" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://stackoverflow.com/users/388916/hubro"><img src="https://avatars0.githubusercontent.com/u/597206?v=4?s=100" width="100px;" alt="Tomas Sandven"/><br /><sub><b>Tomas Sandven</b></sub></a><br /><a href="https://github.com/ilyalesik/effector-localstorage/commits?author=Hubro" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/yumauri"><img src="https://avatars0.githubusercontent.com/u/6583994?v=4?s=100" width="100px;" alt="Victor Didenko"/><br /><sub><b>Victor Didenko</b></sub></a><br /><a href="https://github.com/ilyalesik/effector-localstorage/commits?author=yumauri" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
