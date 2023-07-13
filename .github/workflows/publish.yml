@@ -42,7 +42,6 @@ jobs:
 
       - name: 📦 Publish
         run: pnpm publish --access public --provenance --no-git-checks
-        working-directory: build
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
