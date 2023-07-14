@@ -33,11 +33,7 @@ $ npm install --save effector-localstorage
 In Deno and modern browsers you can load it directly from CDN:
 
 ```javascript
-// esm.sh
 import persist from 'https://esm.sh/effector-localstorage'
-
-// jspm.io
-import persist from 'https://ga.jspm.io/npm:effector-localstorage'
 ```
 
 #### Download
@@ -63,6 +59,8 @@ persist({
   key: 'counter',
 })
 ```
+
+You can play with this example in [Effector's Playground](https://share.effector.dev/MEwiE0j6).
 
 ## Formulae
 
