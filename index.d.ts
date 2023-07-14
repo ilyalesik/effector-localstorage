@@ -1,9 +1,11 @@
-declare module "effector-localstorage" {
-  interface Holder {
-    init: (value?: any) => any
-    onError: (handler: (err: any) => void) => Holder
-    (storeValue: any): Holder
-  }
+import type { Store, Event, Effect } from 'effector'
 
-  export default function connectLocalStorage(key: string): Holder
+declare module 'effector-localstorage' {
+  export default function persist<T>(config: {
+    store: Store<T>
+    key: string
+    def?: T
+    fail?: Event<any> | Effect<any, any>
+    sync?: boolean
+  }): void
 }

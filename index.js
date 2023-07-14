@@ -1,30 +1,32 @@
-function connectStorage (key) {
-  var errorHandler
+export default (
+  { fail, store, sync = 1, def = store.defaultState, key },
 
-  function holder (value) {
+  call = (fn) => (value) => {
     try {
-      localStorage.setItem(key, JSON.stringify(value))
-    } catch (err) {
-      errorHandler && errorHandler(err)
+      fn(value)
+    } catch (e) {
+      if (fail) fail(e)
     }
-  }
+  },
 
-  holder.onError = function (handler) {
-    errorHandler = handler
-    return holder
-  }
+  pick = call((value) =>
+    store.setState(
+      (value = localStorage.getItem(key)) == null
+        ? def
+        : JSON.parse(value),
+    ),
+  ),
+) => {
+  pick()
 
-  holder.init = function (value) {
-    try {
-      var item = localStorage.getItem(key)
-      return item === null ? value : JSON.parse(item)
-    } catch (err) {
-      errorHandler && errorHandler(err)
-    }
-    return value
-  }
+  if (sync)
+    call((fn) => addEventListener('storage', fn))(
+      (e) => !(e.key && e.key != key) && pick(),
+    )
 
-  return holder
+  store.updates.watch(
+    call((value) =>
+      localStorage.setItem(key, JSON.stringify(value)),
+    ),
+  )
 }
-
-module.exports = connectStorage

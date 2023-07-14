@@ -1,7 +1,7 @@
-function connectStorage (key) {
+function connectStorage(key) {
   var errorHandler
 
-  function holder (value) {
+  function holder(value) {
     try {
       localStorage.setItem(key, JSON.stringify(value))
     } catch (err) {
