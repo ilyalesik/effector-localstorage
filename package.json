@@ -83,18 +83,18 @@
     "effector": ">=22.0.0"
   },
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^8.2.6",
+    "@size-limit/preset-small-lib": "^10.0.1",
     "all-contributors-cli": "^6.26.1",
-    "c8": "^8.0.0",
+    "c8": "^8.0.1",
     "clean-publish": "^4.2.0",
-    "effector": "^22.8.6",
-    "esbuild": "^0.18.12",
-    "prettier": "^3.0.0",
-    "publint": "^0.1.16",
-    "size-limit": "^8.2.6",
+    "effector": "^22.8.7",
+    "esbuild": "^0.19.5",
+    "prettier": "^3.0.3",
+    "publint": "^0.2.5",
+    "size-limit": "^10.0.1",
     "snoop": "^1.0.4",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "uvu": "0.5.6"
   },
-  "packageManager": "pnpm@8.6.7"
+  "packageManager": "pnpm@8.9.2"
 }
